@@ -1,0 +1,24 @@
+<h2> Ejercicio 0 </h2>
+<p>Jefe: {{nombre}} </p>
+<p>Edad: {{edad}}</p>
+<p>Activo: {{activo}}</p>
+<p>Familia: {{selectedFamilia}}</p>
+<p>Sistema de notificación: {{sistemaNotificacion}}</p>
+<p>Fecha Nacimiento: {{fechaNacimiento | date:'dd/MM/yyyy'}}</p>
+<p>Numero aleatorio: {{numeroRandom | number: '0.2-4'}}</p>
+<p>Empleados:</p>
+<ul>
+    <li *ngFor="let nombre of nombres">{{nombre}}</li>
+</ul>
+<button (click)="test()">Add minion</button><br>
+<input type="text" (keyup)="refresh()" [(ngModel)]="nombre"/> {{numeroCaracteres}} <br>
+<input type="number" min="0" max="110" [(ngModel)]="edad"/><br>
+<input type="checkbox" [(ngModel)]="activo"/><br>
+<select [(ngModel)]="selectedFamilia">
+    <option *ngFor="let familia of familias">{{familia}}</option>
+</select><br>
+email <input type="radio" name="g1" value="email" [(ngModel)]="sistemaNotificacion"/>
+SMS <input type="radio" name="g2" value="SMS" [(ngModel)]="sistemaNotificacion"/><br>
+<input type="date" [(ngModel)]="fechaNacimiento"/><br>
+<input type="range" min="0" max="110" [(ngModel)]="edad"/><br>
+<h1 *ngIf="edad >= 18">Titulo para mayores de edad</h1>

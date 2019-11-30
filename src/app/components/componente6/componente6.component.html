@@ -1,0 +1,22 @@
+<h1>Ejercicio 5 </h1>
+
+<table> 
+    <tr>
+        <th> Amigos</th>
+    </tr>
+    <tr *ngFor="let amigo of amigos" (click)=moveToAcreedores(amigo)>
+        <td>{{amigo}}</td> 
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th> Acreedores</th>
+    </tr>
+    <tr *ngFor="let acreedor of acreedores" (click)=moveToAmigos(acreedor)>
+            <td>{{acreedor}}</td> 
+    </tr>
+
+</table>
+
+<button (click)="reset()"> Reset </button>

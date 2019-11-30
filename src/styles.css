@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url('https://wallpapertag.com/wallpaper/full/7/c/a/354777-light-background-3840x2160-for-macbook.jpg');
+    /*background-image: url('http://thepatternlibrary.com/img/ao.gif');*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

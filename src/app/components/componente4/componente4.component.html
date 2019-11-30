@@ -1,0 +1,24 @@
+<h1>Ejercicio 3 </h1>
+<h3>Configurador de pizzas</h3>
+
+Tipo de pizza: 
+<select [(ngModel)]="tipoPizzaSelected">
+    <option *ngFor="let tipo of tipos"> {{tipo}}</option>
+</select><br>
+
+Champiñones: <input type="checkbox" [(ngModel)]="champis"/> <br>
+Queso: <input type="checkbox" [(ngModel)]="queso"/> <br>
+
+Tamaño:
+<select [(ngModel)]="tamanyoSelected">
+        <option *ngFor="let tamanyo of tamanyos"> {{tamanyo}}</option>
+    </select><br>
+
+<br>
+<button (click)="calculatePrice()"> Calculate!</button> 
+<input type="number" disabled="disabled" [(ngModel)]="precio"> €
+<!--<div>{{precio}} €</div> -->
+
+
+
+
